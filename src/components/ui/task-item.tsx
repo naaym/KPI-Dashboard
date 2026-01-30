@@ -22,8 +22,8 @@ const TaskItem = React.forwardRef<HTMLDivElement, TaskItemProps>(
       <div
         ref={ref}
         className={cn(
-          "flex items-center gap-3 p-2 rounded-lg transition-all duration-200 hover:bg-muted/50 cursor-pointer group",
-          completed && "opacity-60",
+          "flex items-center gap-3 rounded-xl border border-transparent bg-background/70 px-3 py-2 transition-all duration-200 hover:border-primary/20 hover:bg-primary/5 cursor-pointer group",
+          completed && "border-success/20 bg-success/5",
           className
         )}
         onClick={handleToggle}
@@ -33,7 +33,7 @@ const TaskItem = React.forwardRef<HTMLDivElement, TaskItemProps>(
           className={cn(
             "w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all duration-200",
             completed
-              ? "bg-success border-success text-success-foreground"
+              ? "bg-success text-success-foreground border-success shadow-sm"
               : "border-border group-hover:border-primary"
           )}
         >
@@ -42,7 +42,7 @@ const TaskItem = React.forwardRef<HTMLDivElement, TaskItemProps>(
         
         <span
           className={cn(
-            "text-sm transition-all duration-200 select-none",
+            "text-sm font-medium transition-all duration-200 select-none",
             completed
               ? "line-through text-muted-foreground"
               : "text-foreground"
