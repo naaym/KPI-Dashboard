@@ -98,7 +98,7 @@ const ObjectiveCard = React.forwardRef<HTMLDivElement, ObjectiveCardProps>(
                 {kpi}
               </Badge>
               <Badge variant="secondary" className="text-xs">
-                Target: {kpiTarget}
+                kpiFormula: {kpiTarget}
               </Badge>
             </div>
           </div>

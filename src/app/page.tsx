@@ -22,103 +22,52 @@ import { Toast, ToastProvider, ToastViewport } from "@/components/ui/toast"
 const mockObjectives = [
   {
     id: "1",
-    title: "nessi w a7bebi jemla w bel 7amlaa",
-    kpi: "Customer Satisfaction",
-    kpiTarget: "85% satisfaction rate",
-    progress: 72,
-    status: "in-progress" as const,
+    title: "Le suivi de l'automatisation et l'optimisation de l’exploitation de la Suite Office 365 afin d’améliorer la productivité et la collaboration en réduisant les tâches manuelles.",
+    kpi: "A) Taux d’automatisation des tâches Office 365 : Automatiser 70% des processus récurrents.\n" +
+        "B) Réduction du temps moyen d’exécution des tâches bureautiques : Réduire le temps des tâches répétitives d’au moins 30%.",
+    kpiTarget: "(Nombre de processus automatisés / Nombre total de processus manuels) * 100\n" +
+        "(Temps moyen de réalisation d’une tâche avant et après automatisation)",
+    progress: 85,
+    status: "completed" as const,
     priority: "high" as const,
     dueDate: "2024-03-15",
-    assignee: "Sarah Chen",
     tasks: [
-      { id: "1-1", title: "Implement customer feedback system", completed: true },
-      { id: "1-2", title: "Train support team on new protocols", completed: true },
-      { id: "1-3", title: "Launch satisfaction survey campaign", completed: false },
-      { id: "1-4", title: "Analyze Q1 feedback data", completed: false },
+      { id: "1-1", title: "Participer à la réalisation du document de gouvernance", completed: true },
+      { id: "1-2", title: "Préparation des webinaire en cours", completed: true },
+
     ]
   },
   {
     id: "2", 
-    title: "Increase Revenue Growth Rate",
-    kpi: "Revenue Growth",
-    kpiTarget: "20% YoY growth",
-    progress: 85,
-    status: "in-progress" as const,
+    title: "Assurer la mise en place des workflows (conception, paramétrage, tests et mise en production) en respectant un délai de 3 semaines après la réception du workflow et du formulaire validés.",
+    kpi: "Finaliser 80% des workflows sous 3 semaines après réception des documents.",
+    kpiTarget: "(Nombre de workflows terminés en ≤ 3 semaines / Nombre total de workflows) × 100",
+    progress: 90,
+    status: "completed" as const,
     priority: "high" as const,
     dueDate: "2024-04-30",
-    assignee: "Mike Johnson",
     tasks: [
-      { id: "2-1", title: "Expand enterprise sales team", completed: true },
-      { id: "2-2", title: "Launch new pricing tiers", completed: true },
-      { id: "2-3", title: "Optimize conversion funnel", completed: true },
-      { id: "2-4", title: "Q2 revenue planning", completed: false },
+      { id: "2-1", title: "Développement des besoins spécifique selon la demande du métier", completed: true },
+      { id: "2-2", title: "Mise en production des modification d'un workflow déjà mise en prod\n" +
+            "tout en respectant un délai de 3 semaines après la réception du workflow et du formulaire validé.", completed: true },
+      { id: "2-3", title: "Assurer la résolutions des problèmes réclamés par les métiers", completed: true },
     ]
   },
   {
     id: "3",
-    title: "Improve User Engagement Metrics", 
-    kpi: "User Engagement",
-    kpiTarget: "75% daily active users",
-    progress: 45,
-    status: "in-progress" as const,
-    priority: "medium" as const,
-    dueDate: "2024-03-31",
-    assignee: "Emily Davis",
-    tasks: [
-      { id: "3-1", title: "Redesign onboarding flow", completed: true },
-      { id: "3-2", title: "Implement gamification features", completed: false },
-      { id: "3-3", title: "Launch referral program", completed: false },
-    ]
-  },
-  {
-    id: "4",
-    title: "Optimize Operational Efficiency",
-    kpi: "Operational Efficiency", 
-    kpiTarget: "30% cost reduction",
-    progress: 100,
+    title: "Assurer la résolution et la finalisation des tâches confiées de n'importe quel projet du domaine dans les délais, en assurant l'adéquation des volets : Fonctionnels, Ergonomiques et Documentation (Avec pondération par fonctionnalité).",
+    kpi: "80% des tâches de chaque projet affecté doivent être finalisées dans les délais prévus auparavant.",
+    kpiTarget: "(Nombre de tâches terminées dans les délais / Nombre total de tâches) × 100",
+    progress: 97,
     status: "completed" as const,
     priority: "medium" as const,
-    dueDate: "2024-02-28",
-    assignee: "David Kim",
+    dueDate: "2024-03-31",
+    assignee: "",
     tasks: [
-      { id: "4-1", title: "Automate manual processes", completed: true },
-      { id: "4-2", title: "Implement new workflow system", completed: true },
-      { id: "4-3", title: "Train staff on new tools", completed: true },
+      { id: "3-1", title: "assurer les différentes tâches qui me sont confiées", completed: true },
     ]
   },
-  {
-    id: "5",
-    title: "Launch Quality Management System",
-    kpi: "Quality Metrics",
-    kpiTarget: "95% quality score",
-    progress: 0,
-    status: "not-started" as const,
-    priority: "low" as const,
-    dueDate: "2024-06-30",
-    assignee: "Lisa Wang",
-    tasks: [
-      { id: "5-1", title: "Research quality frameworks", completed: false },
-      { id: "5-2", title: "Select QMS software", completed: false },
-      { id: "5-3", title: "Develop quality standards", completed: false },
-    ]
-  },
-  {
-    id: "6",
-    title: "Drive Innovation Index",
-    kpi: "Innovation Index",
-    kpiTarget: "40 innovation projects",
-    progress: 60,
-    status: "in-progress" as const,
-    priority: "medium" as const,
-    dueDate: "2024-05-15",
-    assignee: "Tom Wilson",
-    tasks: [
-      { id: "6-1", title: "Establish innovation lab", completed: true },
-      { id: "6-2", title: "Launch idea submission platform", completed: true },
-      { id: "6-3", title: "Host innovation workshop", completed: false },
-      { id: "6-4", title: "Evaluate Q1 submissions", completed: false },
-    ]
-  }
+
 ]
 
 // Mock analytics data
@@ -392,8 +341,8 @@ export default function ObjectiveEvaluationDashboard() {
                   <div className="space-y-4">
                     <div className="h-8 bg-muted rounded w-48 animate-shimmer" />
                     <div className="h-4 bg-muted rounded w-64 animate-shimmer" />
-                    
-                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
                       {[1, 2, 3, 4, 5, 6].map((i) => (
                         <SkeletonCard key={i} />
                       ))}
@@ -443,8 +392,8 @@ export default function ObjectiveEvaluationDashboard() {
                   </div>
                   
                   {/* Objectives Grid */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div>
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6">
+                    <div className="min-w-0">
                       <h2 className="text-2xl font-bold text-foreground mb-2">
                         Objectives & Key Results
                       </h2>
@@ -454,24 +403,24 @@ export default function ObjectiveEvaluationDashboard() {
                     </div>
                     
                     {/* Mobile search */}
-                    <div className="md:hidden relative">
+                    <div className="md:hidden relative w-full sm:w-64">
                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                       <Input
                         placeholder="Search..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="pl-10 w-48"
+                        className="pl-10 w-full"
                       />
                     </div>
                   </div>
                   
                   {/* Objectives Grid */}
                   {filteredObjectives.length > 0 ? (
-                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
                       {filteredObjectives.map((objective, index) => (
                         <div
                           key={objective.id}
-                          className="animate-slide-up"
+                          className="animate-slide-up min-w-0"
                           style={{ animationDelay: `${index * 100}ms` }}
                         >
                           <ObjectiveCard
